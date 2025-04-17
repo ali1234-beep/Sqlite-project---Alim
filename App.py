@@ -13,7 +13,8 @@ class R6CreditManager:
     6. Delete a transaction by name or ID. 👌
     7. EXIT. ❌
 
-    Your selection: 
+    
+    Please enter the number of your selection:
     """
 
     def __init__(self):
