@@ -56,19 +56,19 @@ def create_tables(connection):
         connection.execute(CREATE_CREDITS_TABLE)
         connection.execute(CREATE_OPERATORS_TABLE)
 
-def add_bean(connection, name, method, rating):
+def add_Siege(connection, name, method, rating):
     with connection:
         connection.execute(INSERT_SIEGE, (name, method, rating))
 
-def get_all_beans(connection):
+def get_all_Siege(connection):
     with connection:
         return connection.execute(GET_ALL_SIEGE).fetchall()
 
-def get_beans_by_name(connection, name):
+def get_Sieges_by_name(connection, name):
     with connection:
         return connection.execute(GET_SIEGE_BY_NAME, (name,)).fetchall()
     
-def get_best_preparation_for_bean(connection, name):
+def get_best_preparation_for_Siege(connection, name):
     return connection.execute(GET_BEST_PREPARATION_FOR_SIEGE, (name, name)).fetchone()
 
 def add_transaction(connection, operator, item, amount):
